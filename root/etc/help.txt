@@ -1,0 +1,17 @@
+Tash,shell of Tinux,version 0.0.1-debug
+[Pretend to be an operating system]
+
+0.help
+  帮助
+
+1.exit 
+  退出
+
+2.hello
+  hello world！
+
+3.ls
+  显示当前目录	
+
+4.cd [path]
+  切换目录

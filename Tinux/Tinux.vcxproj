@@ -72,6 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(ProjectDir)TinuxCore\;$(ProjectDir)Tash\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -152,6 +153,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="Tash\InputHelper.h" />
+    <ClInclude Include="Tash\Tash.h" />
+    <ClInclude Include="TinuxCore\TCmd.h" />
+    <ClInclude Include="TinuxCore\TCore.h" />
+    <ClInclude Include="TinuxCore\TFileSys.h" />
+    <ClInclude Include="TinuxCore\TOtherSys.h" />
+    <ClInclude Include="TUtil.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -160,7 +169,17 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Tash\InputHelper.cpp" />
+    <ClCompile Include="Tash\Tash.cpp" />
     <ClCompile Include="Tinux.cpp" />
+    <ClCompile Include="TinuxCore\TCmd.cpp" />
+    <ClCompile Include="TinuxCore\TCore.cpp" />
+    <ClCompile Include="TinuxCore\TFileSys.cpp" />
+    <ClCompile Include="TinuxCore\TOtherSys.cpp" />
+    <ClCompile Include="TUtil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\root\etc\help.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
