@@ -274,6 +274,9 @@ void Tinux::TCore::initCmd()
 	cmdBox["help"] = TCmdPtr(new TCmdHelp());
 	cmdBox["ls"] = TCmdPtr(new TCmdLS());
 	cmdBox["cd"] = TCmdPtr(new TCmdCD());
+	cmdBox["cat"] = TCmdPtr(new TCmdCat());
+
+
 
 	auto iter = cmdBox.begin();
 	while (iter != cmdBox.end())
